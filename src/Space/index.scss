@@ -1,0 +1,37 @@
+.space {
+  display: inline-flex;
+  &-vertical {
+    flex-direction: column;
+  }
+  &-align-start {
+    align-items: flex-start;
+  }
+  &-align-end {
+    align-items: flex-end;
+  }
+  &-align-center {
+    align-items: center;
+  }
+  &-align-baseline {
+    align-items: baseline;
+  }
+}
+
+.space-gap-col-small {
+  column-gap: 8px;
+}
+.space-gap-row-small {
+  row-gap: 8px;
+}
+.space-gap-col-middle {
+  column-gap: 16px;
+}
+.space-gap-row-middle {
+  row-gap: 16px;
+}
+.space-gap-col-large {
+  column-gap: 24px;
+}
+.space-gap-row-large {
+  row-gap: 24px;
+}

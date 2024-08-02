@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "declaration": true, // 生成 .d.ts 类型声明文件
+    "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中进行默认导入
+    "target": "es2015", // 设定编译后的JavaScript版本为 ES2015
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // 包含的库
+    "module": "ESNext", // 使用 ESNext 模块系统
+    "skipLibCheck": true, // 跳过库文件的类型检查
+    "moduleResolution": "Node", // 使用 Node 的模块解析策略
+    "resolveJsonModule": true, // 允许导入 JSON 文件
+    "isolatedModules": true, // 强制每个文件作为单独模块编译
+    "jsx": "react-jsx", // 使用 React JSX 语法
+    "allowImportingTsExtensions": null, //
+    "strict": true // 启用所有严格类型检查选项
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx"]
+}
