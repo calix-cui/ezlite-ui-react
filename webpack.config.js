@@ -10,7 +10,7 @@ module.exports = {
         index: ['./src/index.ts']
     },
     output: {
-        filename: 'c-react-components.js',
+        filename: 'cui-react-lib.js',
         path: path.join(__dirname, 'dist/umd'),
         library: 'cui',
         libraryTarget: 'umd'
