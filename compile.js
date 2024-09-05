@@ -1,7 +1,10 @@
+/*
+ * @Author: cuixiang cuixiang405@gmail.com
+ * @Date: 2024-08-02 15:51:34
+ * @FilePath: /cui-react-lib/compile.js
+ * @Description: compile all sass to css
+ */
 const { exec } = require('child_process')
-// const fs = require('fs')
-const path = require('path')
-// const glob = require('glob')
 
 // Directories
 const srcDir = 'src'
@@ -17,20 +20,16 @@ const sassComponents = [
 ]
 
 sassComponents.forEach((item) => {
-  // absolute path
-  // const filePath = path.resolve(__dirname, `${srcDir}/${item}/index.sass`)
-  // const outputPath1 = path.resolve(__dirname, `${esmDir}/${item}/index.css`)
-  // const outputPath2 = path.resolve(__dirname, `${cjsDir}/${item}/index.css`)
-
-  // relative path
+  // 构建文件路径和输出路径
   const filePath = `./${srcDir}/${item}/index.scss`
   const outputPath1 = `./${esmDir}/${item}/index.css`
   const outputPath2 = `./${cjsDir}/${item}/index.css`
 
+  // 构建命令
   const cmd1 = `npx sass ${filePath} ${outputPath1}`
   const cmd2 = `npx sass ${filePath} ${outputPath2}`
 
-  // Execute the command
+  // 执行命令并处理输出
   exec(cmd1, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error compiling ${filePath}:`, stderr)
@@ -39,7 +38,6 @@ sassComponents.forEach((item) => {
     console.log(`Compiled ${filePath} to ${outputPath1}`)
   })
 
-  // Execute the command
   exec(cmd2, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error compiling ${filePath}:`, stderr)
