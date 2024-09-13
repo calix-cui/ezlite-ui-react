@@ -4,7 +4,7 @@
 
 # 安装
 
-`npm install cui-react-lib`
+`npm install ezlite-react`
 
 # 使用
 

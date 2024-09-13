@@ -7,8 +7,8 @@
     <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.11.11/dayjs.min.js"></script>
-    <script src="https://unpkg.com/cui-react-lib@0.0.1/dist/umd/cui-react-lib.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/cui-react-lib@0.0.1/dist/esm/Calendar/index.css">  
+    <script src="https://unpkg.com/ezlite-react@0.0.1/dist/umd/ezlite-react.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ezlite-react@0.0.1/dist/esm/Calendar/index.css">  
 </head>
 <body>
     <div id="root"></div>
@@ -16,7 +16,7 @@
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
 
-        root.render(React.createElement(cui.Calendar, { value: dayjs('2024-07-01') }));
+        root.render(React.createElement(ezlite.Calendar, { value: dayjs('2024-07-01') }));
     </script>
 </body>
 </html>

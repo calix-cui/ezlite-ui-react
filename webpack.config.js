@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const path = require('path');
 
 /**
@@ -10,9 +11,9 @@ module.exports = {
         index: ['./src/index.ts']
     },
     output: {
-        filename: 'cui-react-lib.js',
+        filename: 'ezlite-react.js',
         path: path.join(__dirname, 'dist/umd'),
-        library: 'cui',
+        library: 'ezlite',
         libraryTarget: 'umd'
     },
     module: {

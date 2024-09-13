@@ -1,10 +1,10 @@
 /*
  * @Author: cuixiang cuixiang405@gmail.com
  * @Date: 2024-08-02 15:51:34
- * @FilePath: /cui-react-lib/compile.js
+ * @FilePath: /react/compile.js
  * @Description: compile all sass to css
  */
-const { exec } = require('child_process')
+import { exec } from 'child_process'
 
 // Directories
 const srcDir = 'src'
