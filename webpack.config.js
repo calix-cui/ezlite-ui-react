@@ -24,7 +24,16 @@ module.exports = {
                 options: {
                     configFile: 'tsconfig.build.json'
                 }
-            }
+            },
+            // {
+            //     // scss loader
+            //     test: /\.scss$/,
+            //     use: [
+            //        'style-loader',
+            //         'css-loader',
+            //         'sass-loader'
+            //     ]
+            // }
         ]
     },
     resolve: {
