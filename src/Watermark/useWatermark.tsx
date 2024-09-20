@@ -4,7 +4,7 @@ import { merge } from "lodash-es";
 
 export type WatermarkOptions = Omit<WatermarkProps, "className" | "style" | "children">;
 
-export function isNumber(obj: any): obj is number {
+export function isNumber(obj: string | number): obj is number {
   return Object.prototype.toString.call(obj) === "[object Number]" && obj === obj;
 }
 

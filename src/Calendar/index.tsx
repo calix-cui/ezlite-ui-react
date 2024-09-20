@@ -38,7 +38,7 @@ function Calendar(props: CalendarProps) {
   }
 
   function prevMonthHandler() {
-    let prevMonth = curMonth.subtract(1, "month");
+    const prevMonth = curMonth.subtract(1, "month");
 
     setCurMonth(prevMonth);
 
@@ -47,7 +47,7 @@ function Calendar(props: CalendarProps) {
   }
 
   function nextMonthHandler() {
-    let nextMonth = curMonth.add(1, "month");
+    const nextMonth = curMonth.add(1, "month");
 
     setCurMonth(nextMonth);
 

@@ -15,7 +15,7 @@ interface MonthCalendarProps extends CalendarProps {
 
 function getAllDays(date: Dayjs) {
   // let daysInMonth = date.daysInMonth();
-  let startDate = date.startOf("month");
+  const startDate = date.startOf("month");
   const day = startDate.day(); // 本月第一天的星期数
 
   const daysInfo: Array<daysType> = new Array(6 * 7);
@@ -32,7 +32,7 @@ function getAllDays(date: Dayjs) {
   const currentDate = date.date();
   // 计算本月的日期
   for (let i = day; i < daysInfo.length; i++) {
-    let curDate = startDate.add(i - day, "day");
+    const curDate = startDate.add(i - day, "day");
     daysInfo[i] = {
       date: curDate,
       currentMonth: curDate.month() === date.month(),

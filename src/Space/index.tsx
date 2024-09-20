@@ -29,7 +29,7 @@ const getSizeClass = (size: SpaceProps["size"]) => {
 
 // 只对数字类型的 size，转换成对应 style
 const getStyle = (size: SpaceProps["size"]) => {
-  let style: CSSProperties = {};
+  const style: CSSProperties = {};
   if (typeof size === "number") {
     style.gap = size;
   } else if (Array.isArray(size)) {
@@ -67,8 +67,11 @@ const Space: React.FC<SpaceProps> = (props) => {
     className
   );
 
-  const wrappedNodes = childNodes.map((child: any, index) => {
-    const key = (child && child.key) || `space-item-${index}`;
+  const wrappedNodes = childNodes.map((child: React.ReactNode, index) => {
+    let key = `space-item-${index}`
+    if (React.isValidElement(child)) {
+      key = (child && child.key) as string;
+    }
 
     return (
       <>
